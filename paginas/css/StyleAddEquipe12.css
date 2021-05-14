@@ -1,0 +1,166 @@
+
+#tabre {
+  background-color: none;
+  font-family: verdana;
+  color: black;
+  padding: 1px 15px;
+  width: 100%;
+  vertical-align: middle;
+  border-spacing: 35px;
+  position: relative;
+  left: 20%;
+}
+
+td {
+  position: relative;
+  top: 100px;
+  display: inline-block;
+  width: 30%;
+  padding-left: 8px;
+  height: 280px;
+  display: table; float:left; margin-right:10px;
+}
+#busca
+{
+  width: 90%;
+  position: absolute;
+  left: 20%;
+  top: 70px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+}
+.borda {
+  position: absolute;
+  top:230px;
+  left: 25%;
+  background-color: white;
+  border: 0;
+  padding: 20px 10px 10px 10px;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#Camp
+{
+  width: 44.7%;
+  position: relative;
+  left: 5%;
+  top: 30px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+}
+
+.select3
+{
+  position: relative;
+  left: 5%;
+  top: 30px;
+  width: 14.59%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+}
+
+select
+{
+  position: relative;
+  left: 5%;
+  top: 30px;
+  width: 37.2%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+}
+.nomeEvento
+{
+  font-size: 20pt;
+  position: relative;
+  left: 30%;
+  top: 150;
+  padding: 1px 5px;
+  margin-bottom: 0;
+}
+input[type="submit"]
+{
+  position: relative;
+  left: 5%;
+  top: 40px;
+  width: 90%;
+  background-color: #009199;
+  border: 1px solid #009199;
+  border-radius: 3px;
+  padding: 8px 5px;
+  cursor: hand;
+  color: white;
+  font-weight: 400;
+  font-size: 12pt;
+}
+
+@media only screen and (max-width:3000px) {
+  .borda {
+    position: absolute;
+    left: 30%;
+    width: 50%;
+    height: 400px;
+    box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -webkit-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -moz-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+  }
+
+@media only screen and (max-width:460px) {
+   .borda {
+    position: absolute;
+    top: 110px;
+    left: 5;
+    border: none;
+    width: auto;
+    height: 300px;
+    box-shadow: 0px 0px 0px #808080, 0px 0px 0px #000000;
+  }
+  .nomeEvento
+  {
+    font-size: 15pt;
+    position: relative;
+    left: auto;
+    top: 70;
+    padding: 1px 25px;
+    margin-bottom: 0;
+  }
+
+  .select1
+  {
+    position: relative;
+    left: 5%;
+    top: 30px;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 8px 5px;
+  }
+  .select2
+  {
+    position: relative;
+    left: 5%;
+    top: 50px;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 8px 5px;
+  }
+
+  input[type="submit"]
+  {
+    position: relative;
+    left: 5%;
+    top: 80px;
+    
+  }
+
+}

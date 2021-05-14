@@ -1,0 +1,132 @@
+drop database if exists Campeonato;
+Create database Campeonato;
+use Campeonato;
+
+/*tabelas para evento e etc*/
+create table Campeonato
+(
+	idCamp int not null auto_increment primary key,
+    nomeCamp varchar(45),
+	QuantEquipe int not null,
+	jogEquipe int not null,
+    anoEvento int not null
+);
+create table Equipes
+(
+	codEquipe int primary key auto_increment,
+    nomeEquipe varchar(25),
+    anoEquipe int,
+    FK_idCamp int,
+    logotipo varchar(50),
+    FOREIGN KEY (FK_idCamp) REFERENCES Evento(FK_idCamp)
+);
+ALTER TABLE Equipes AUTO_INCREMENT = 5001;
+
+create table Jogadores
+(
+	codJogador int primary key auto_increment,
+    nomeJogador varchar(25),
+    FK_codEquipe int,
+    FOREIGN KEY (FK_codEquipe) REFERENCES Equipes(FK_codEquipe)
+);
+
+
+create table Confrontos
+(
+	codConfronto int primary key auto_increment,
+    rodadaConfronto int,
+    nomeConfronto varchar(30),
+    FK_codEquipe1 int,
+    FK_codEquipe2 int,
+    equipe1Gols int,
+    equipe2Gols int,
+    anoEvento int,
+    FK_idCamp int,
+    FOREIGN KEY (FK_codEquipe1) REFERENCES Equipes(FK_codEquipe1),
+    FOREIGN KEY (FK_codEquipe2) REFERENCES Equipes(FK_codEquipe2),
+    FOREIGN KEY (FK_idCamp) REFERENCES Campeonato(FK_idCamp)
+);
+
+
+
+/*tabelas de configurações*/
+Create table possiveisQuantidadesDeEquipes
+(
+	codQuant int primary key auto_increment,
+    possiveisQuantidades int
+);
+Create table possiveisQuantidadesDeJogadores
+(
+	codQuant int primary key auto_increment,
+    possiveisQuantidadesDeJogadores int
+);
+Create table possiveisAnosDevento
+(
+	codQuant int primary key auto_increment,
+    possiveisAnosDevento int
+);
+
+insert into possiveisQuantidadesDeEquipes values
+(null, 6), 
+(null, 8), 
+(null, 10), 
+(null, 12), 
+(null, 14);
+
+insert into possiveisQuantidadesDeJogadores values
+(null, 6), 
+(null, 7), 
+(null, 8), 
+(null, 9), 
+(null, 10);
+
+insert into possiveisAnosDevento values
+(null, 2019), 
+(null, 2020), 
+(null, 2021), 
+(null, 2022), 
+(null, 2023),
+(null, 2024), 
+(null, 2025), 
+(null, 2026), 
+(null, 2027), 
+(null, 2028),
+(null, 2029), 
+(null, 2030);
+
+insert into Campeonato values
+(null,'Etec League', 10, 10, 2019), 
+(null, 'Etec League', 8, 8, 2020), 
+(null, 'Etec League', 6, 8, 2021), 
+(null, 'Etec League', 12, 8, 2022) ;
+
+insert into Equipes values
+(null,'Losers FC', 1), 
+(null, 'PRP', 2), 
+(null, 'NAC', 1), 
+(null, 'Los Bigodox', 1),
+(null, 'B.A.F.C', 1),
+(null, 'Rajaut', 2),
+(null,'HER', 1), 
+(null, 'Autsburg', 1);
+
+
+
+
+
+select count(*) from Equipes where anoEquipe = 2026;
+
+select nomeEquipe, nomeCamp, anoEvento from Equipes
+inner join Campeonato on Equipes.FK_idCamp = Campeonato.idCamp where Campeonato.anoEvento = 2025;
+
+select * from Confrontos where anoEvento = 2022;
+update Equipes set logotipo = "" where codEquipe = 5001;
+
+select nomeEquipe, nomeJogador from Equipes
+inner join Jogadores on Equipes.codEquipe = Jogadores.FK_codEquipe;
+
+select * from Jogadores;
+
+select count(*) from Jogadores where FK_codEquipe = 5001;
+
+update Confrontos SET equipe1Gols = 2, equipe2Gols = 1 where codConfronto = 2;

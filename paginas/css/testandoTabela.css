@@ -1,0 +1,219 @@
+#tabelaPrincipal
+{
+  position: absolute;
+  left: 20%;
+  top: 150px;
+  width: 75%;
+  border-collapse:separate;
+  border-spacing: 3px;
+
+}
+
+
+thead
+{
+    font-size: 15.5px;
+}
+
+#tabre {
+  background-color: none;
+  font-family: verdana;
+  color: black;
+  padding: 1px 15px;
+  width: 80%;
+  vertical-align: middle;
+  border-spacing: 35px;
+  position: absolute;
+  left: 20%;
+  top: 100px;
+}
+tr
+{
+  height: 50px;
+}
+td
+{
+  width: 150px;
+}
+
+
+.bordaHead
+{
+  position: relative;
+  top: 230px;
+  left: 0%; 
+  height: 30px;
+  background-color: white;
+  border: 0;
+  padding: 15px;
+  border-radius: 3px;
+  margin: 1.5px;
+  align-content: center;
+  
+}
+
+.borda {
+  position: relative;
+  top: 20px;
+  left: 0%; 
+  background-color: white;
+  border: 0;
+  padding: 15px;
+  border-radius: 3px;
+  margin: 1.5px;
+  align-content: center;
+  
+}
+#tamColuna1{width:10%;}
+#tamColuna2{width:7%;}
+#tamColuna3{width:12%;}
+#tamColuna4{width:12%;}
+#tamColuna5{width:2%;}
+
+#colNomeEvento{ position: relative; left: 24.5%; }
+#colAnoEvento{ position: relative; left: 23%; }
+#colQuantEquipe{ position: relative; left: 18%; }
+#colNumJogadores{ position: relative; left: 18%; }
+#colExcluirEvento{ position: relative; left: 10%; }
+
+
+#col1{ position: relative; left: 25%; }
+#col2{ position: relative; left: 37%; }
+#col3{ position: relative; left: 35%; }
+#col4{ position: relative; left: 33%; }
+#col5{ position: relative; left: 45%; }
+
+#btnBusca
+{
+  position: absolute;
+  left: 35.3%;
+  top: 70px;
+  width: 7%;
+  background-color: #009199;
+  border: 1px solid #009199;
+  border-radius: 3px;
+  padding: 8px 5px;
+  cursor: hand;
+  color: white;
+}
+
+#busca
+{
+  width: 15%;
+  position: absolute;
+  left: 20%;
+  top: 70px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+}
+select
+{
+  position: relative;
+  left: 5%;
+  top: 30px;
+  width: 44.7%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px 5px;
+}
+
+
+@media only screen and (max-width:3000px) {
+  .borda {
+    width: 25%;
+    height: 50px;
+	   padding: 15px;
+    box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -webkit-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -moz-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+  }
+  .bordaHead {
+    width: 15%;
+    height: 20px;
+    padding: 15px;
+    box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -webkit-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+    -moz-box-shadow: -1px -1px 4px #808080, 1px 1px 2px #000000;
+  }
+
+@media only screen and (max-width:460px) {
+  .borda {
+    position: relative;
+    top: 180px;
+    left: 5;
+    border: none;
+    width: auto;
+    height: auto;
+    margin: 1;
+    box-shadow: 0px 0px 0px #808080, 0px 0px 0px #000000;
+    display: block;
+  }
+  .bordaHead {
+    position: relative;
+    top: 180px;
+    left: 5;
+    border: none;
+    width: auto;
+    height: 50px;
+    margin: 1;
+    box-shadow: 0px 0px 0px #808080, 0px 0px 0px #000000;
+    display: block;
+  }
+  .bordaEx {
+    position: relative;
+    top: 180px;
+    left: 5;
+    border: none;
+    width: auto;
+    height: auto;
+    margin: 1;
+    box-shadow: px 0px 0px #808080, 0px 0px 0px #000000;
+    display: none;
+  }
+  .imag { display: block;  }
+  #col1{ display: block; position: relative; left: auto; }
+  #col2{ display: inline; }
+  #col3{ display: none; }
+  #col4{ display: none; }
+  #col41{ display: none; }
+
+  #busca
+  {
+  display: none;
+  }
+  input[type="submit"]
+  {
+  display: none;
+  }
+  .select1
+  {
+    position: relative;
+    left: 5%;
+    top: 30px;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 8px 5px;
+  }
+  .select2
+  {
+    position: relative;
+    left: 5%;
+    top: 50px;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 8px 5px;
+  }
+
+  input[type="submit"]
+  {
+    position: relative;
+    left: 5%;
+    top: 100px;
+    
+  }
+
+}
